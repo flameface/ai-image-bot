@@ -1,0 +1,23 @@
+{
+  "name": "ai-image-bot",
+  "version": "1.0.0",
+  "description": "Best AI image bot using prodia",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.44",
+    "ascii-table": "^0.0.9",
+    "discord.js": "^14.12.1",
+    "mongoose": "^7.4.5",
+    "ms": "^2.1.3",
+    "prodia.js": "^2.0.0",
+    "uuid": "^9.0.1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "author": "FlameFace",
+  "license": "ISC"
+}
