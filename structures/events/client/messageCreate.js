@@ -14,11 +14,6 @@ client.on("messageCreate", async (message) => {
         if (cmd.length === 0) return;
 
         let command = client.commands.get(cmd)
-
-        const player = client.note.players.get(message.guild.id);
-        const memberChannel = message.member.voice.channelId
-        const clientChannel = message.guild.members.me.voice.channelId;
-
         if (!command) command = client.commands.get(client.aliases.get(cmd))
 
         if (command) {
@@ -42,24 +37,6 @@ client.on("messageCreate", async (message) => {
 
             if (command.guildOnly && !message.guildId) {
                 return message.channel.send(`:x: ${command.name} is a guild only command`)
-            }
-
-            if (command.inVoice && !memberChannel) {
-                if (!memberChannel) {
-                    return message.channel.send(`:x: You must be in a voice channel to use this command.`)
-                }
-            }
-
-            if (command.sameVoice && memberChannel !== clientChannel) {
-                return message.channel.send(`:x: You must be in the same voice channel as me to use this command.`)
-            }
-
-            if (command.player && !player) {
-                return message.channel.send(`:x: No music is currently playing.`)
-            }
-
-            if (command.current && !player.current) {
-                return message.channel.send(`:x: I am not playing anything right now.`)
             }
 
             if (command) command.run(client, message, args);
