@@ -156,7 +156,7 @@ module.exports = {
 
         // if (prompt.length < 10) return interaction.reply({ content: "Try to generate a creative thing with a long prompt.", ephemeral: true });
 
-        const getModels = await prodia.getModels();
+        const getModels = await prodia.getSDmodels();
 
         if (!getModels.includes(model)) return interaction.reply({ content: "Invalid model", ephemeral: true });
 
