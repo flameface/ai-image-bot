@@ -1,4 +1,11 @@
-# Installation
+# **About**
+This bot can generate images using prodia with tons of models and features.
+
+## **Used Resource**
+
+**[prodia.js](https://github.com/unburn/prodia.js) [discord.js](https://github.com/discordjs) [discord-handler](https://github.com/ogshree/discord-handler)**
+
+# **Installation**
 
 Install all packages required to run the bot.
 ```
@@ -21,5 +28,5 @@ To run the bot run the following command.
 node index.js
 ```
 
-# Label
+# **Label**
 This project belongs to **[Unburn](https://github.com/unburn)**, and you have full rights to modify or contribute.
